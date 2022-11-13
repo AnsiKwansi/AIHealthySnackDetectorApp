@@ -23,9 +23,10 @@
             milk: "Healthy", 
             brownie: "Junk", 
             cereal: "Healthy", 
-            "flour crackers": "Healthy", 
+            "flour crackers": "Junk", 
             popcorn: "Junk", 
-            popsicle: "Junk"
+            popsicle: "Junk",
+            "sweet potato fries":"Junk"
 
         }
         let model, webcam, labelContainer, maxPredictions, statusDiv;
