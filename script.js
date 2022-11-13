@@ -22,7 +22,7 @@
             Donut: "Junk", 
             milk: "Healthy", 
             brownie: "Junk", 
-            cereal: "Healthy", 
+            cereal: "Junk", 
             "flour crackers": "Junk", 
             popcorn: "Junk", 
             popsicle: "Junk",
