@@ -3,9 +3,27 @@
     <head>
         <title>AI Snack Detector</title>
     </head>
+    <style>
+.btn {
+    background-color: rgb(168, 173, 72);
+    font-size: 40px;
+    margin-top: 50px;
+}
+body{
+    margin: auto;
+    max-width: 800px;
+    padding: 10px;
+}
+    </style>
 <body>
-        <div>AI Healthy Snack Detector App (ver 4)</div>
-        <button type="button" onclick="init()">Start</button>
+        <h1>AI Healthy Snack Detector App (ver 5)</h1>
+        <button type="button" id="startBtn" class="btn" onclick="init()">Start The App</button>
+        <div id="loadingMsg" style="display:none;">
+            Please be patient. I am made by 6th graders as their First App for science project <br><br> 
+            AI Model and camera startup takes time. If popup comes up to allow camera say 'Allow'. <br><br>
+             Don't be in a rush to eat that snack.<br><br> 
+             It may not be healthy. I will help you shortly. <br><br>
+             Thank you for waiting...</div>
         <div id="webcam-container" style="display:flex;justify-content: space-around;"></div>
         <div id="label-container"></div>
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>

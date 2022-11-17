@@ -33,6 +33,9 @@
 
         // Load the image model and setup the webcam
         async function init() {
+            document.getElementById("startBtn").style.display = 'none';
+            document.getElementById("loadingMsg").style.display = 'block';
+
             const modelURL = URL + "model.json";
             const metadataURL = URL + "metadata.json";
 
@@ -78,6 +81,8 @@
 
         // run the webcam image through the image model
         async function predict() {
+            document.getElementById("loadingMsg").style.display = 'none';
+
             // predict can take in an image, video or canvas html element
             const prediction = await model.predict(webcam.canvas);
             let predictedClasses = [];            
@@ -98,7 +103,7 @@
         function displayRecognitionResult(classes) {
             if(classes.length == 0) {
                 document.body.style.backgroundColor = 'gray';
-                statusDiv.textContent = '? ? ?';
+                statusDiv.innerHTML = '? ? ? <br\><span style="font-size:25px;color:blue;">(Point camera to the snack item)</span>';
             }
             if(classes.length == 1) {
                 const healthStatus = snackItems[classes[0]];
